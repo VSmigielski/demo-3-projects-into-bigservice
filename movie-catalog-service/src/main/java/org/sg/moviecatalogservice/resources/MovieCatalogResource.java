@@ -35,7 +35,6 @@ public class MovieCatalogResource {
         );
 
         return ratingsList.stream()
-                .map(rating -> new CatalogItem("Name", "Desc", rating.getRating()))
                 .map(rating -> {
                     Movie movie = restTemplate.getForObject("http://localhost:8082/movies/" + rating.getMovieId(), Movie.class);
                     return new CatalogItem(movie.getName(), "Description", rating.getRating());
