@@ -10,4 +10,6 @@ public class MovieCatalogServiceApplication {
 		SpringApplication.run(MovieCatalogServiceApplication.class, args);
 	}
 
+
+
 }
